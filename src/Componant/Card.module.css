@@ -1,0 +1,24 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  grid-template-rows: repeat(3, minmax(50px, 1fr));
+  text-transform: capitalize;
+  gap: 10px 15px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  padding: 15px;
+  border-radius: 10px;
+}
+.card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+}
+.card div span:first-of-type {
+  font-weight: 100;
+}

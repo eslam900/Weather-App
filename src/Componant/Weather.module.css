@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body{
+  font-family: 'Inconsolata', monospace;
+  background-image: linear-gradient(rgba(11, 11, 17, 0.377) 40%, rgb(32, 26, 17))
+}
+.main {
+  width: 50vw;
+  height: 80vh;
+  margin: 100px auto;
+  position: relative;
+  border-radius: 10px;
+  background-image: url(../image/michael-d-jSADgWPmKDU-unsplash.jpg);
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .main {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+.container {
+  height: 80%;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+}
+form {
+  display: flex;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.search {
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  border-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%;
+  padding: 5px;
+}
+@media (max-width: 767px) {
+  .search {
+    font-size: 20px;
+  }
+}
+.btn {
+  font-size: 35px;
+  border: none;
+  background-color: aquamarine;
+  padding: 2px;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.temp {
+  font-size: 70px;
+  margin-top: 20px;
+}
+.status {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.weatherData {
+  height: 50%;
+  position: relative;
+}
+.sun {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+}
