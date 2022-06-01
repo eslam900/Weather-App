@@ -21,6 +21,7 @@ const WeatherPage = () => {
       e.preventDefault();
     }
   };
+
   return (
     <Fragment>
       {error && window.alert(error)}

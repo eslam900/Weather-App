@@ -15,7 +15,7 @@ body{
   margin: 100px auto;
   position: relative;
   border-radius: 10px;
-  background-image: url(../image/michael-d-jSADgWPmKDU-unsplash.jpg);
+  background-image: url(../image/background.jpg);
   background-size: cover;
 }
 @media (max-width: 767px) {

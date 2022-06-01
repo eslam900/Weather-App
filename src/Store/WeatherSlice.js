@@ -27,8 +27,8 @@ const weatherSlice = createSlice({
     [getData.fulfilled]: (state, action) => {
       state.loading = false;
       state.error = false;
-      state.getWeatherData = action.payload;
-      console.log(state.getWeatherData);
+      state.getWeatherData = action.payload
+      console.log(state.getWeatherData)
     },
     [getData.rejected]: (state, action) => {
       state.loading = false;

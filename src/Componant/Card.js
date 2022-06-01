@@ -5,14 +5,18 @@ import Styles from "./Card.module.css";
 const Card = () => {
   const { getWeatherData } = useSelector((state) => state.weather);
 
-  // const getTime = (number) => {
-  //   const hours = new Date(number).getHours();
-  //   const minute = new Date(number).getMinutes();
-  //   return `${hours}:${minute}`;
-  // };
-  const getTime = (number) => {
-    const hours = new Date(number).getHours();
-    const minute = new Date(number).getMinutes();
+  const getTime = (time, timeZone) => {
+    const difTime =
+      (new Date().getHours() - new Date().getUTCHours()) * 60 * 60;
+    const hours = new Date((time + (timeZone - difTime)) * 1000).getHours();
+    const minute = new Date(time * 1000).getMinutes();
+    if (hours < 10) {
+      return `0${hours}:${minute}`;
+    } else if (minute < 10) {
+      return `${hours}:0${minute}`;
+    } else if (hours < 10 && minute < 10) {
+      return `0${hours}:0${minute}`;
+    }
     return `${hours}:${minute}`;
   };
 
@@ -21,11 +25,16 @@ const Card = () => {
       <div className={Styles.card}>
         <div>
           <span>sunrise</span>
-          <span>{getTime(getWeatherData.sys.sunrise)}</span>
+
+          <span>
+            {getTime(getWeatherData.sys.sunrise, getWeatherData.timezone)}
+          </span>
         </div>
         <div>
           <span>sunset</span>
-          <span>{getTime(getWeatherData.sys.sunset)}</span>
+          <span>
+            {getTime(getWeatherData.sys.sunset, getWeatherData.timezone)}
+          </span>
         </div>
         <div>
           <span>realfeel</span>

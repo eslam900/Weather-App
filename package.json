@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://eslam900.github.io/Calculator-React-App",
+  "homepage": "https://eslam900.github.io/Weather-App",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
